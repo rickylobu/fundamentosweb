@@ -1,0 +1,80 @@
+{
+    "pathsSelectors": [
+        {
+            "path": "./js/VariablesPrimitivos.js",
+            "idSelector": "code-variables-primitivos"
+        },
+        {
+            "path": "./js/Operadores.js",
+            "idSelector": "code-operadores"
+        },
+        {
+            "path":"./js/EstructurasControl.js",
+            "idSelector":"code-EstructurasControl"
+        },
+        {
+            "path":"./js/Funciones.js",
+            "idSelector":"code-Funciones"
+        },
+        {
+            "path":"./js/this.js",
+            "idSelector":"code-this"
+        },
+        {
+            "path":"./js/Closure.js",
+            "idSelector":"code-Closure"
+        },
+        {
+            "path":"./js/POO.js",
+            "idSelector":"code-poo"
+        },
+        {
+            "path":"./js/POO/EjemploPOO.js",
+            "idSelector":"code-ejemplo-poo"
+        },
+        {
+            "path":"./js/Arrays.js",
+            "idSelector":"code-ejemplo-arrays"
+
+        },
+        {
+            "path":"./js/programacionFuncional.js",
+            "idSelector":"code-programacion-funcional"
+
+        },
+        {
+            "path":"./js/funcionesOrdenSuperiorArrays.js",
+            "idSelector":"code-metodos-arrays-orden-superior"
+
+        },
+        {
+            "path":"./js/manipulacionDOM.js",
+            "idSelector":"code-manipulacion-DOM"
+
+        },
+        {
+            "path":"./js/addEventListener.js",
+            "idSelector":"code-addEventListener"
+        },
+        {
+            "path":"./js/addEventListenerEventos.js",
+            "idSelector":"code-addEventListener-eventos"
+        },
+        {
+            "path":"./js/addEventListenerAvanzado.js",
+            "idSelector":"code-addEventListener-avanzado"
+        },
+        {
+            "path":"./js/xhrEjemplos.js",
+            "idSelector":"code-XHR"
+        },
+        {
+            "path":"./js/asyncAwaitFetch-RickyMorty.js",
+            "idSelector":"code-Rick-y-Morty"
+        },
+        {
+            "path":"./js/asincronismoCompleto.js",
+            "idSelector":"code-asincronismo-completo"
+        }
+    ]
+}

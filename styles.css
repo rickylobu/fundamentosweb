@@ -1,0 +1,703 @@
+/*Esto es un comentario en css*/
+
+/*---------------Selectores de Etiqueta---------------*/
+
+/*Estilos de header */
+/* selector de " " espacio se utiliza para descendientes no directos */
+
+header> nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    padding-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 15px;
+}
+
+/* Más adelante vemos # para seleccionar el elemento con id
+#header-html son los estilos de index.html para la página de HTML5
+#header-css son los estilos de la cabecera de css.html */
+
+/* Por medio de el id diferente en el header podemos cambiar el color 
+dependiendo en qué página esta */
+
+#header-html, #footer-html {
+    background-color: #F16529;
+}
+
+#header-css, #footer-css {
+    background-color: #2965F1;
+}
+
+
+header> nav> figure {
+    margin: 0;
+}
+figcaption {
+    font-size: small;
+}
+
+header> nav> section {
+    flex-grow:1;
+    /* si quieres saber qué hace flex grow: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow */
+    padding-right: 10%;
+
+}
+
+header> nav> section> h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-shadow: 5px 5px 5px rgba(15, 7, 58, 0.662);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+header> nav ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    color: #264DE4;
+    margin: auto;
+}
+
+header nav li {
+    margin: 0;
+}
+
+header> nav a {
+    text-decoration: none;
+}
+
+header nav a:hover {
+    font-size: 110%;
+    font-weight: bolder;
+}
+
+/*Puedes adentrarte en el arbol del dom 
+a partir de etiquetas*/
+nav>section>ol {
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 10px;
+    width: fit-content;
+
+}
+
+/*estílos de tabla métodos para agregar css*/
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #2965F1;
+}
+
+caption h3 {
+    margin: 10px 0;
+}
+
+
+/*Puedes agregar estílos a un elemneto por su id 
+con el selector # */
+
+#anatomiaCSS {
+position: relative;
+}
+
+#anatomiaCSS> figure {
+ padding-left: 10%;
+}
+#imgCSSDeclaracion {
+    width: 80%;
+    border: 2px solid #264DE4;
+    box-shadow: 0px 5px 5px rgba(33, 25, 138, 0.6);
+    border-radius: 10px;
+}
+
+
+
+/* También puedes agregar estílos a 
+varios elementos con la misma class */
+.non {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(135deg, #264DE4,
+            #606dbc 10px,
+            black 10px,
+            #2965F1 20px);
+    border-radius: 5px;
+}
+
+.par {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(45deg, #264DE4,
+            #606dbc 10px,
+            black 10px,
+            #2965F1 20px);
+    border-radius: 5px;
+}
+
+/* Estilos de ht de index.HTML */
+.even {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(135deg, #F16529,
+            #007BFF 10px,
+            #fff 10px,
+            #E44D26 20px);
+    border-radius: 5px;
+}
+
+.odd {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(45deg, #F16529,
+            #007BFF 10px,
+            #fff 10px,
+            #E44D26 20px);
+    border-radius: 5px;
+}
+
+
+
+
+/* Estos son los estílos para explicar la especificidad */
+p {
+    color: black;
+    /* Especificidad: 1 */
+}
+
+.texto-destacado {
+    color: green;
+    /* Especificidad: 10 */
+}
+
+#parrafo1 {
+    color: red;
+    /* Especificidad: 100 */
+}
+
+.importante {
+    color: purple !important;
+    /* Sobrescribe cualquier otra regla */
+}
+
+/* Estos son los estilos para explicar Box-model */
+#box-model> figure {
+    text-align: center;
+    
+}
+.box {
+    width: fit-content;
+    padding: 10px;
+    border: 5px solid #2965F1;
+    margin: auto;
+    box-shadow: 5px 10px 5px rgba(33, 25, 138, 0.6);
+    border-radius: 10px;
+    background-color: #59C7C8;
+    align-content: center;
+    text-align: center;
+}
+
+.box>p {
+    border: 5px solid #BEE3D2;
+    background-color: white;
+}
+
+
+/* Estilos de etiquetas de código */
+code {
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    background-color: #2d2d2d;
+    padding: 1px 3px;
+    border-radius: 4px;
+    font-size: 1em;
+    display: inline-block;
+}
+
+pre {
+    background-color: #2d2d2d;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+    overflow-x: auto;
+    /* Scroll horizontal si es necesario */
+}
+
+.code-html {
+    /*color: #2D7AD6;*/
+    color: #AC4C1F;
+}
+
+.code-css {
+    color: #37A3F0;
+}
+
+.code-comentario {
+    color: #6A9955;
+    font-style: italic;
+    margin-left: 10px;
+}
+
+
+/* Estilos de sección de diseño y posicionamiento */
+#diseño-posicionamiento {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* Ejemplo de clearfix */
+#float-en-caja-container {
+    border: 1px solid orange;
+    padding: 10px;
+    overflow: hidden;
+    /* Clearfix */
+}
+
+.flotante-en-caja {
+    float: left;
+    width: 100px;
+    height: 50px;
+    background: orange;
+    margin-left: 2px
+}
+
+.contenido {
+    margin-left: 120px;
+}
+
+
+
+#clearfix-container {
+    display: block;
+    border: 5px solid orange;
+    padding: 10px;
+}
+
+.contenido-float {
+    float: left;
+    padding-top: 2px;
+    background-color: orange;
+    margin-left: 2px;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+    padding-top: 2px;
+    background-color: rgb(255, 81, 0);
+    color: white;
+}
+
+
+
+/* Ejemplo de transform */
+#example-transform {
+    display: flex;
+    width: 49%;
+    height: 370px;
+    float: left;
+    border: #2965F1 solid 1px;
+    border-radius: 25px;
+}
+
+.centrado {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2965F1;
+    padding: 10px;
+    border: 2px solid #6A9955;
+    box-shadow: #6A9955 2px 3px;
+}
+
+
+/* Ejemplo de z-index con FIGURAS */
+#ejemplo_z-index {
+    display: block;
+    width: 49%;
+    height: 370px;
+    float: left;
+    border: 1px solid #2965F1;
+    border-radius: 25px;
+    position: relative;
+}
+
+.cuadrado {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    z-index: 1;
+    left: 35%;
+    top: 30%
+}
+
+.circulo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: blue;
+    border-radius: 50%;
+    z-index: 2;
+    left: 45%;
+    top: 40%
+}
+
+.triangulo {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    z-index: 3;
+    left: 50%;
+    top: 50%
+}
+
+.pre-largo {
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+
+/*  Transiciones y Animaciones*/
+#example-animation {
+    display: block;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.animated-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    background-size: 800% 800%;
+    animation: GradientAnimation 10s ease infinite;
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        background-position-y: bottom;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        background-position-y: top;
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        background-position-y: bottom;
+    }
+}
+
+#img-alan {
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    transition: 3s;
+    border-radius: 10px;
+    width: 35%;
+    transform: translate(50%, 0%);
+}
+
+#img-alan:hover {
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    background-size: 800% 800%;
+    animation: GradientAnimation 10s ease-in-out infinite;
+    border-radius: 99%;
+    transform: translate(50%, 0%);
+    scale: 115%;
+}
+
+/*Estilos Generales */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    /* Tamaño de fuente base */
+    line-height: 1.6;
+    /* Altura de línea  */
+    color: #060418;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+a:visited {
+    color: #264DE4;
+}
+
+section {
+    float: none;
+    clear: both;
+}
+
+/*  Estilos de Disposición general de aside y main  */
+#container {
+    display: flex;
+    gap: 2%;
+}
+
+main {
+    max-width: 80%;
+    text-align: justify;
+    padding-right: 2%;
+}
+
+aside {
+    position: -webkit-sticky;
+    /* Para navegadores Webkit */
+    position: sticky;
+    top: 20px;
+    /* Se queda pegado cuando la parte superior llega a 20px de la parte superior de la pantalla */
+    min-width: 180px;
+    height:100vh;
+    padding: 5px;
+    font-size: 0.95rem;
+    overflow-y: auto;
+}
+
+
+/*  Estilos de Footer  */
+.footer {
+    text-align: center;
+}
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    vertical-align: middle;
+}
+
+.secondary-links a {
+    margin-left: 10px;
+    color: #060418;
+}
+
+
+/* Excelente Curioso!! 
+Por ser curioso y leer hasta el final te dejo 
+estas notas para que sigas aprendiendo:
+
+---------- Unidades de medida en CSS ------------
+Unidades Relativas**: `%`, `em`, `rem`, `vw`, `vh`.
+Unidades Absolutas**: `px`, `pt`, `cm`, `mm`, `pc`.
+Unidades de Tiempo**: `s`, `ms`.
+Unidades de Ángulo**: `deg`, `rad`, `grad`, `turn`.
+
+Te recomiendo aprender este tema en:
+https://css-tricks.com/the-lengths-of-css/
+
+
+----------- Colores posibles en CSS -------------- 
+Nombres de color: `color: red;`
+Hexadecimal: `color:#ff5733`
+rgb y rgba: `color: rgb(255, 0, 0);`  Aplica el color rojo puro 
+HSL y HSLA: `color: hsl(120, 100%, 50%);`  Aplica un tono verde 
+
+Te recomiendo las siguinetes páginas para colores:
+https://color.adobe.com/es/create
+https://coolors.co/
+https://paletton.com/
+https://m3.material.io/styles/color/system/overview
+
+
+*/
+
+
+
+/*Estilos de JavaScript.html*/
+
+#header-javascript, #footer-javascript {
+    background-color: #EACA32;
+}
+
+#header-javascript> nav {
+    color: black;
+}
+
+.non-js {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(135deg, #EACA32,
+            #F16529 10px,
+            black 10px,
+            #2965F1 20px);
+    border-radius: 5px;
+    float: none;
+    clear: both;
+}
+
+.par-js {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(45deg, #EACA32,
+            #F16529 10px,
+            black 10px,
+            #2965F1 20px);
+    border-radius: 5px;
+    float: none;
+    clear: both;
+}
+
+.code-js {
+    color: #EACA32;
+}
+
+.contenedor-codigo-resultado {
+    width: 100%;
+    height: calc(90vh);
+    min-height: fit-content;
+    display: flex;
+    gap: 2%;
+    margin-top: 10px; 
+}
+
+#contenedor-codigo-igualdad {
+    width: 100%;
+    min-height: fit-content;
+    display: flex;
+    gap: 2%;
+    margin-top: 10px; 
+}
+
+.explicacion {
+    width: 49%;
+    overflow-y: auto;
+}
+
+.contenedor-vertical {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+}
+#code-estructuras-mostrar, #pre-ancho100{
+    width: 100% !important;
+}
+.resultado-js {
+    flex: 1; /* Ocupa la otra mitad del alto disponible */
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    overflow-y: auto;
+}
+
+/* clase para manipulación del DOM .resultado  */
+
+.resaltadoDOM {
+    box-shadow: 0px 5px 5px rgb(24, 20, 20);
+    text-align: center;
+    transition: 5s; 
+    
+}
+
+.circuloDOM {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50% !important;
+    transition: 5s;
+}
+
+.trianguloDOM {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(107, 45, 177, 0.662);
+    transform: 5s;
+    
+}
+
+/*ejemplo delegación de eventos de addEventListener para formulario*/
+.error {
+    border: 2px solid red;
+  }
+  
+  .success {
+    border: 2px solid green;
+  }
+  
+  #result.error {
+    color: red;
+  }
+  
+  #result.success {
+    color: green;
+  }
+  
+
+  /*estílos para ejemplo Rick y Morty async await con fetch*/
+  #container-Rick-y-Morty {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  button {
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .output {
+    background-color: #e8ffe8;
+    border: 1px solid #8bc34a;
+    padding: 10px;
+    margin-top: 20px;
+  }

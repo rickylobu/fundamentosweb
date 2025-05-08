@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 CSS3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header id="header-css"><!-- Cabecera -->
+        <nav>
+            <figure>
+                <a href="index.html"><img alt="Foto de CSS3" title="CSS3" src="assets/img/CSS3.png" width="100px" /></a>
+                <figcaption>Logo de CSS 3</figcaption>
+            </figure>
+            <section>
+                <h1>Curso de desarrollo de aplicaciones Web</h1>
+                <ol>
+                    <li><a href="index.html">HTML5</a></li>
+                    <li><a href="css.html">CSS3</a></li>
+                    <li><a href="javascript.html">JavaScript</a></li>
+                    <li><a href="playground.html" target="_blank">Playground</a></li>
+                </ol>
+            </section>
+        </nav>
+    </header>
+    <section id="container">
+        <aside>
+            <ol>
+                <li><a href="#articleCSS">Artículo CSS3</a></li>
+                <li><a href="#anatomiaCSS">Anatomía de declaración CSS3</a></li>
+                <li><a href="#añadir-CSS-a-HTML">Añadir CSS a HTML</a></li>
+                <li><a href="#selectores-CSS">Selectores de CSS</a></li>
+                <li><a href="#box-model">Modelo de caja: Box model</a></li>
+                <li><a href="#prioridad-especificidad">Prioridad y especificidad</a></li>
+                <li><a href="#diseño-posicionamiento">Diseño y Posicionamiento</a></li>
+                <li><a href="#transiciones-animaciones">Transiciones y animaciones</a></li>
+                <li><a href="#pseudoclases">Pseudoclases</a></li>
+                <li><a href="#pseudoelementos">Pseudoelemento</a></li>
+                <li><a href="#responsive">Responsive design</a></li>
+                <li><a href="#profundizarCSS">Profundizar en CSS</a></li>
+                <li><a href="#playground">¿Quieres codificar? Playground MDN, IDE online</a></li>
+            </ol>
+        </aside>
+        <main>
+            <section id="Clase-3-HTML-5.">
+				<figure>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dcKATkXERpk?si=lNKwSBSKRUssxP3j"
+						title="Clase 4 CSS3." frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					<figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 4 CSS3.<a
+							href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
+							YouTube</a></figcaption>
+				</figure>
+			</section>
+            <section id="articleCSS">
+                <article>
+                    <header>
+                        <h2>CSS 3 Cascading Style Sheets</h2>
+                        <p>
+                        <address>Escrito por: <a href="correo_del_autor@ejemplo.com" target="_blank">Ricardo López
+                                Arriaga
+                                Bueno</a></address>
+                        <time datetime="2024-11-30">30 de Noviembre de 2024</time>
+                        </p>
+                    </header>
+
+                    <main>
+                        <blockquote cite="https://developer.mozilla.org/es/docs/Web/CSS">
+                            <p>
+                                <q>CSS (Cascading Style Sheets, en español Hojas de Estilo en Cascada) es un lenguaje de
+                                    diseño gráfico para definir y crear la presentación de un documento estructurado
+                                    escrito
+                                    en
+                                    HTML o XML.</q>
+                                <cite>
+                                    <a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN Web
+                                        Docs</a>
+                                </cite>
+                            </p>
+                        </blockquote>
+                        <blockquote cite="https://drive.google.com/drive/folders/1u9aEyHMHketZPjJ_ffaE5zb4ehfXASe9">
+                            <p>
+                                <q>CSS fue desarrollado por el W3C en 1996 para separar la presentación del contenido,
+                                    permitiendo
+                                    a los desarrolladores web definir el estilo de los elementos HTML de manera más
+                                    eficiente. CSS
+                                    permite controlar el diseño de múltiples páginas web a la vez, facilitando la
+                                    consistencia y el
+                                    mantenimiento del diseño.</q>
+                                <cite><a href="https://drive.google.com/drive/folders/1u9aEyHMHketZPjJ_ffaE5zb4ehfXASe9"
+                                        target="_blank">Historia y fundamentos de la Web</a></cite>
+                            </p>
+                        </blockquote>
+                        <blockquote
+                            cite="https://gredos.usal.es/bitstream/handle/10366/132322/El_inicio_de_la_Web_historia_y_cronologi.pdf?sequence=1">
+                            <p>
+                                <q>CSS permite separar el contenido de un documento HTML de su presentación (colores,
+                                    fuentes, formas, etc.), facilitando la accesibilidad, la flexibilidad y el control
+                                    del
+                                    formato.
+                                    Las especificaciones de CSS son desarrolladas por el W3C. CSS permite aplicar
+                                    múltiples hojas de estilo a un documento y establece un esquema de prioridad para
+                                    determinar qué reglas se aplican en caso de conflicto.</q>
+                                <cite><a href="https://gredos.usal.es/bitstream/handle/10366/132322/El_inicio_de_la_Web_historia_y_cronologi.pdf?sequence=1"
+                                        target="_blank">(Gutiérrez, 2014)</a></cite>
+                            </p>
+                        </blockquote>
+                    </main>
+                </article>
+            </section>
+            <hr class="non">
+            <section id="anatomiaCSS">
+                <h2>Anatomía de una declaración CSS</h2>
+                <p>La estructura básica de CSS se compone de selectores y declaraciones. Un selector apunta al elemento
+                    HTML que deseas estilizar, y una declaración contiene una propiedad y un valor separados por dos
+                    puntos.</p>
+                <figure>
+                    <img src="assets/img/anatomia CSS.jpg" alt="Estructura de CSS: selectores y declaraciones"
+                        title="CSS Anathomy" width="80%" id="imgCSSDeclaracion">
+                    <figcaption>
+                        Imágen de la anatomía de una declaración CSS de <cite><a
+                                href="https://platzi.com/home/clases/2467-frontend-developer/40834-anatomia-de-una-declaracion-css-selectores-propied/">Platzi</a></cite>
+                    </figcaption>
+                </figure>
+                <p>Estructura de CSS:</p>
+                <ul>
+                    <li><strong>Selector:</strong> Indica el elemento HTML al que se aplicará el estilo. Por
+                        ejemplo,
+                        <code class="code-css" title="Código CSS3">p { }</code> selecciona todos los párrafos.
+                    </li>
+                    <li><strong>Declaración:</strong> Consiste en una propiedad y un valor. Por ejemplo,
+                        <code class="code-css" title="Código CSS3">color: blue;</code> es una declaración que establece
+                        el color del texto a azul.
+                    </li>
+                    <li><strong>Propiedad:</strong> Especifica el aspecto del elemento que deseas cambiar. Ejemplos
+                        incluyen <code class="code-css" title="Código CSS3">color</code>, <code class="code-css"
+                            title="Código CSS3">font-size</code>, y <code class="code-css"
+                            title="Código CSS3">margin</code>.</li>
+                    <li><strong>Valor:</strong> Define el valor de la propiedad. Por ejemplo, en
+                        <code class="code-css" title="Código CSS3">color: blue;</code>, <code class="code-css"
+                            title="Código CSS3">blue</code> es el valor.
+                    </li>
+                </ul>
+            </section>
+            <hr class="par">
+            <section id="añadir-CSS-a-HTML">
+                <h2>Añadir CSS a HTML</h2>
+                <p><strong><em>Existen tres formas de añadir CSS a un documento HTML</em></strong>: utilizando el
+                    atributo <code class="code-html" title="Código HTML5">style</code> en
+                    línea dentro de la etiqueta HTML: <code class="code-html"
+                        title="Código HTML5">&lt;span style="color: red;"&gt;</code>, la segunda forma es
+                    con la etiqueta <code class="code-html" title="Código HTML5">&lt;style&gt;</code> en el encabezado
+                    del documento, o la tercera, siendo la
+                    convención y la forma más común: <mark>vinculando un
+                        archivo CSS externo con la etiqueta <code class="code-html"
+                            title="Código HTML5">&lt;link rel="stylesheet"&gt;</code></mark>.</p>
+                <ul>
+                    <li>
+                        <strong>Con el atributo <code class="code-html" title="Código HTML5">style</code>:</strong>
+                        <p>Este método se utiliza para aplicar estilos directamente a un elemento HTML específico.</p>
+                        <pre><code class="code-html" title="Código HTML5">&lt;p style="color: white; font-size: 14px;"&gt;<span style="color: white; font-size: 14px;"> es un párrafo estilizado en línea</span>.&lt;/p&gt;</code></pre>
+                    </li>
+                    <li>
+                        <strong>Con la etiqueta <code class="code-html"
+                                title="Código HTML5">&lt;style&gt;</code>:</strong>
+                        <p>Este método se utiliza para definir estilos en el encabezado del documento HTML, aplicándolos
+                            a múltiples elementos.</p>
+                        <pre><code class="code-html" title="Código HTML5">
+        &lt;head&gt;
+            &lt;style&gt;
+                p {
+                    color: blue;
+                    font-size: 14px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Con un archivo CSS externo:</strong>
+                        <p>Este método se utiliza para mantener los estilos en un archivo separado, lo que facilita el
+                            mantenimiento y la reutilización de estilos en múltiples páginas.</p>
+                        <pre><code class="code-html" title="Código HTML5">
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="styles.css"&gt;
+    &lt;/head&gt;
+                        </code></pre>
+                        <p>Crea y nombra un nuevo archivo con extención .css
+                        <pre><code class="code-css" title="Código CSS3">
+    /*   En el documento styles.css  */
+    /* Esto es un comentario en un documento.css*/
+    /* Puedes ver más comentarios educativos 
+        inspeccionando esta página con F12 */
+        
+    p {
+        color: blue;
+        font-size: 14px;
+    }
+                        </code></pre>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <hr class="non">
+            <section id="selectores-CSS">
+                <h2>Selectores por etiqueta, id y class</h2>
+                <p>
+                    Se Pueden añadir estilos a los elementos HTML por su nombre de etiqueta, por el atributo id único
+                    del elemento y a multiples elementos mediante el atributo class
+                </p>
+                <table>
+                    <caption>
+                        <h3>Métodos para Agregar CSS</h3>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Método de Agregar CSS</th>
+                            <th>Descripción</th>
+                            <th>Sintaxis en HTML</th>
+                            <th>Selector en CSS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nombre de Etiqueta</td>
+                            <td>Aplica estilos a todos los elementos de un tipo específico.</td>
+                            <td><code class="code-html"
+                                    title="Código HTML5">&lt;p&gt;Este es un párrafo.&lt;/p&gt;</code></td>
+                            <td><code class="code-css" title="Código CSS3">p { color: blue; }</code></td>
+                        </tr>
+                        <tr>
+                            <td>Atributo ID</td>
+                            <td>Aplica estilos a un elemento específico con un ID único.</td>
+                            <td><code class="code-html"
+                                    title="Código HTML5">&lt;p id="parrafo1"&gt;Este es un párrafo.&lt;/p&gt;</code>
+                            </td>
+                            <td><code class="code-css" title="Código CSS3">#parrafo1 { color: green; }</code></td>
+                        </tr>
+                        <tr>
+                            <td>Atributo Class</td>
+                            <td>Aplica estilos a uno o más elementos que comparten una clase.</td>
+                            <td><code class="code-html"
+                                    title="Código HTML5">&lt;p class="texto-destacado"&gt;Este es un párrafo.&lt;/p&gt;</code>
+                            </td>
+                            <td><code class="code-css" title="Código CSS3">.texto-destacado { color: red; }</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong><mark><em>De tarea te recomiendo profundizar y practicar en:</em></mark></strong></p>
+                <h3>Combinadores y Separadores en CSS</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Combinador/Separador</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Enlace a MDN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+ (Next-sibling combinator)</td>
+                            <td>Selecciona el elemento que es el siguiente hermano inmediato del primer elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">h1 + p</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>&gt; (Child combinator)</td>
+                            <td>Selecciona los elementos que son hijos directos del primer elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">div &gt; p</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>|| (Column combinator)</td>
+                            <td>Selecciona celdas en una tabla que están en la misma columna que un elemento
+                                especificado.</td>
+                            <td><code class="code-css" title="Código CSS3">col || td</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>~ (Subsequent sibling combinator)</td>
+                            <td>Selecciona todos los elementos que son hermanos del primer elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">h1 ~ p</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>" " (Descendant combinator)</td>
+                            <td>Selecciona todos los elementos que son descendientes del primer elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">div p</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>| (Namespace separator)</td>
+                            <td>Selecciona elementos en un espacio de nombres específico.</td>
+                            <td><code class="code-css" title="Código CSS3">ns|element</code></td>
+                            <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors#combinators_and_separators"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr class="par">
+            <section id="box-model">
+                <h2>Modelo de caja en CSS: Box-model</h2>
+                <figure>
+                    <img src="assets/img/box-model-css.jpeg" alt="Modelo de caja en CSS" title="CSS Box-model" width="40%">
+                    <figcaption>
+                        Imágen del modelo de caja del inglés Box-model de <cite><a
+                                href="https://fedmentor.dev/posts/padding-margin/box-model-800w.jpeg">fedmentor</a></cite>
+                    </figcaption>
+                </figure>
+                <details>
+                    <summary>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ ¿Quieres un buen consejo?</summary>
+                    <p>Se recomienda presionar F12 para inspeccionar esta página en tu navegador. También puedes hacer
+                        tus
+                        experimentos en <a href="#playground">Playground</a> al final de esta página web así como ver y
+                        modificar este archivo .html y .css en:</p><a
+                        href="https://developer.mozilla.org/es/play?id=%2FkYDX41b2AXW7Cwh7I2iPVeWoox0QI%2BMVmgX%2FQuIj0ML%2FNlct9S%2FOhHDRwD6mfv0CXRWoRFtSPGuFMLK"
+                        target="_blank">Playground de MDN Docs Web</a>
+                </details>
+                <p>El modelo de caja en CSS describe cómo se colocan y dimensionan los elementos en una página web.
+                    Cada elemento se representa como una caja rectangular, que consta de los siguientes componentes:
+                </p>
+                <ul>
+                    <li><strong>Contenido:</strong> El área donde se muestra el contenido del elemento (texto,
+                        imágenes, etc.).</li>
+                    <li><strong>Padding:</strong> El espacio entre el contenido y el borde del elemento. Se puede
+                        ajustar con la propiedad <code class="code-css" title="Código CSS3">padding</code>.</li>
+                    <li><strong>Borde:</strong> El contorno del elemento. Se puede ajustar con la propiedad
+                        <code class="code-css" title="Código CSS3">border</code>.
+                    </li>
+                    <li><strong>Margen:</strong> El espacio exterior alrededor del borde del elemento. Se puede
+                        ajustar con la propiedad <code class="code-css" title="Código CSS3">margin</code>.</li>
+                </ul>
+                <div class="box">
+                    <p>Ejemplo de caja<br>Con F12 me puedes ver mejor</p>
+                </div>
+                <p>En el ejemplo anterior, la caja tiene un <strong>contenido</strong> de 200px de ancho y 100px de
+                    alto, un <strong>padding</strong> de 10px, un <strong>borde</strong> de 5px y un
+                    <strong>margen</strong> de 15px.
+                </p>
+            </section>
+            <hr class="non">
+            <section id="prioridad-especificidad">
+                <h2>Prioridad y especificidad</h2>
+                <p>
+                    La cascada es el mecanismo que determina cómo se aplican los estilos cuando hay múltiples reglas que
+                    afectan a un mismo elemento.
+                </p>
+                <p>
+                    La especificidad es un cálculo que determina qué reglas CSS se aplican a un elemento cuando hay
+                    múltiples reglas que podrían aplicarse. La especificidad se calcula en función de los selectores
+                    utilizados:
+                </p>
+                <ol>
+                    <li><strong>Selectores de ID:</strong> Tienen la mayor especificidad.</li>
+                    <li><strong>Selectores de clase, atributos y pseudoclases:</strong> Tienen una especificidad media.
+                    </li>
+                    <li><strong>Selectores de tipo (etiqueta) y pseudoelementos:</strong> Tienen la menor especificidad.
+                    </li>
+                </ol>
+                <h3>Ejemplo de uso de especificidad</h3>
+                <p>Imagina que tienes los siguientes tres parrafos HTML5 en tu documento
+                    <strong><em>index.html</em></strong>:
+                </p>
+                <ol>
+                    <li>
+                        <p><code class="code-html"
+                                title="Código HTML5">&lt;p <mark>id="parrafo1"</mark> <mark>class="texto-destacado importante"</mark>&gt;Este es un párrafo con id y class.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p><code class="code-html"
+                                title="Código HTML5">&lt;p <mark>class="texto-destacado"</mark>&gt;Este es otro párrafo sólo con class.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                    <li>
+                        <p><code class="code-html"
+                                title="Código HTML5">&lt;p&gt;Este es un tercer párrafo con la etiqueta p sola sin atributo.&lt;/p&gt;</code>
+                        </p>
+                    </li>
+                </ol>
+                <p>Si le agregas los siguientes estílos CSS3 a tu documento <strong><em>styles.css</em></strong>:</p>
+                <pre><code class="code-css" title="Código CSS3">
+    p { 
+        color: black; /* Especificidad: 1 */
+    }
+    .texto-destacado { 
+        color: green; /* Especificidad: 10 */ 
+    } #parrafo1 {
+        color: red; /* Especificidad: 100 */ 
+    } .importante { 
+        color: purple !important; /* Sobrescribe cualquier otra regla */ 
+    }
+                </code></pre>
+                <p>El resultado renderizado sería el siguiente:</p>
+                <ol>
+                    <li>
+                        <p id="parrafo1" class="texto-destacado importante">Este es un párrafo con id y class.</p>
+                    </li>
+                    <li>
+                        <p class="texto-destacado">Este es otro párrafo sólo con class.</p>
+                    </li>
+                    <li>
+                        <p>Este es un tercer párrafo con la etiqueta &lt;p&gt; sola sin atributo.</p>
+                    </li>
+                </ol>
+            </section>
+            <hr class="par">
+            <section id="diseño-posicionamiento">
+                <h2>Diseño y Posicionamiento</h2>
+                <article>
+                    <h3>Propiedades Comunes</h3>
+                    <ul>
+                        <li><strong>Color de texto:</strong> <code class="code-css">color: red;</code> <code
+                                class="code-comentario">/* #ffffff, rgb(xxx,xxx,xxx), rgba(x,x,x,x) */</code></li>
+                        <li><strong>Tamaño de fuente:</strong> <code class="code-css">font-size: 20px;</code> <code
+                                class="code-comentario">/* Ajusta el tamaño del texto */</code></li>
+                        <li><strong>Alineación:</strong> <code class="code-css">text-align: center;</code> <code
+                                class="code-comentario">/* Alineación horizontal del texto */</code></li>
+                        <li><strong>Márgenes:</strong> <code class="code-css">margin: 10px;</code> <code
+                                class="code-comentario">/* Espacio exterior alrededor del elemento */</code></li>
+                        <li><strong>Relleno:</strong> <code class="code-css">padding: 15px;</code> <code
+                                class="code-comentario">/* Espacio interior dentro del borde */</code></li>
+                        <li><strong>Borde:</strong> <code class="code-css">border: 2px solid black;</code> <code
+                                class="code-comentario">/* Define el borde del elemento */</code></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Conceptos de Display</h3>
+                    <ul>
+                        <li><strong>Block:</strong> <code class="code-css">display: block;</code> <code
+                                class="code-comentario">/* Componente se comporta como caja */</code></li>
+                        <li><strong>Inline:</strong> <code class="code-css">display: inline;</code> <code
+                                class="code-comentario">/* Elemento no rompe la línea */</code></li>
+                        <li><strong>Inline-block:</strong> <code class="code-css">display: inline-block;</code> <code
+                                class="code-comentario">/* Inline con dimensiones ajustables */</code></li>
+                        <li><strong>Flex:</strong> <code class="code-css">display: flex;</code> <code
+                                class="code-comentario">/* Layout flexible */</code></li>
+                        <li><strong>Grid:</strong> <code class="code-css">display: grid;</code> <code
+                                class="code-comentario">/* Diseño en filas y columnas */</code></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Propiedad Position</h3>
+                    <ul>
+                        <li><strong>Static:</strong> <code class="code-css">position: static;</code> <code
+                                class="code-comentario">/* Posición predeterminada */</code></li>
+                        <li><strong>Relative:</strong> <code class="code-css">position: relative; top: 10px;</code>
+                            <code class="code-comentario">/* Posición relativa a su posición original */</code>
+                        </li>
+                        <li><strong>Absolute:</strong> <code class="code-css">position: absolute; left: 20px;</code>
+                            <code class="code-comentario">/* Relativo a su contenedor posicionado */</code>
+                        </li>
+                        <li><strong>Fixed:</strong> <code class="code-css">position: fixed; bottom: 0;</code> <code
+                                class="code-comentario">/* Fijo respecto a la ventana */</code></li>
+                        <li><strong>Sticky:</strong> <code class="code-css">position: sticky; top: 0;</code> <code
+                                class="code-comentario">/* Pegajoso según el scroll */</code></li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Uso de Float y Clearfix</h3>
+                    <p>Técnicas clásicas para posicionamiento.</p>
+                    <div id="float-en-caja-container">
+                        <div class="flotante-en-caja">Flotante1</div>
+                        <div class="flotante-en-caja">Flotante2</div>
+                        <div class="contenido">Contenido normal</div>
+                        <div class="contenido">junto a un elemento flotante</div>
+                    </div>
+                    <div id="float-en-caja-container">
+                        <p>Por favor nota la diferencia entre las dos siguinetes oraciones:</p>
+                        <!-- pre { white-space: pre; }-->
+                        <div class="contenido-float">Esto es un&nbsp;</div>
+                        <div class="contenido-float">contenido flotado&nbsp;</div>
+                        <div class="contenido-float">mediante la etiquta &nbsp;</div>
+                        <div class="contenido-float"><code class="code-css">float: left;</code></div>
+
+                        <div class="clearfix"></div>
+                        <div class="contenido-float">Esto es un&nbsp;</div>
+                        <div class="contenido-float">contenido flotado&nbsp;</div>
+                        <div class="clearfix"> pero <code class="code-html">&lt;div class="clearfix"></code> corta el
+                        </div>
+                        <div class="contenido-float"><code class="code-css">float: left;</code> con <code
+                                class="code-css">float:none;
+                            clear:both;</code></div>
+
+                    </div>
+                </article>
+                <article>
+                    <h3>Transform: translate</h3>
+                    <p>Centrar elementos usando transform: translate.</p>
+                    <div id="example-transform">
+                        <div class="centrado">Centrado</div>
+                    </div>
+                    <h4>CSS de Caja Centrada con transform: translate:</h4>
+                    <pre class="pre-largo"><code class="code-css">
+/* Ejemplo de transform */
+.pre-largo {
+    width: 50%;
+    height: 300px;
+    float: left;
+}
+
+#example-transform {
+    display: flex;
+    width: 49%;
+    height: 370px;
+    float: left;
+    border: #2965F1 solid 1px;
+    border-radius: 25px;
+}
+
+.centrado {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #2965F1;
+    padding: 10px;
+    border: 2px solid #6A9955;
+    box-shadow: #6A9955 2px 3px;
+}
+
+                    </code></pre>
+
+                    <h3>Uso de z-index y Transform</h3>
+                    <p>Controla la superposición de elementos.</p>
+                    <div id="ejemplo_z-index">
+                        <div class="cuadrado"></div>
+                        <div class="circulo"></div>
+                        <div class="triangulo"></div>
+                    </div>
+                    <h4>CSS de figuras:</h4>
+                    <pre class="pre-largo"><code class="code-css">
+/* Ejemplo de z-index con FIGURAS */
+#ejemplo_z-index {
+display: block;
+width: 49%;
+height: 370px;
+float: left;
+border: 1px solid #2965F1;
+border-radius: 25px;
+position: relative;
+}
+
+.cuadrado {
+position: absolute;
+width: 100px;
+height: 100px;
+background: red;
+z-index: 1;
+left: 35%;
+top: 30%
+}
+
+.circulo {
+position: absolute;
+width: 100px;
+height: 100px;
+background: blue;
+border-radius: 50%;
+z-index: 2;
+left: 45%;
+top: 40%
+}
+
+.triangulo {
+position: absolute;
+width: 0;
+height: 0;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-bottom: 100px solid green;
+z-index: 3;
+left: 50%;
+top: 50%
+}
+
+.pre-largo {
+width: 50%;
+height: 300px;
+float: left;
+}
+                    </code></pre>
+                    <details>
+                        <summary><strong>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ ¿Quieres ver la etiqueta &lt;marquee&gt;?</strong></summary>
+                        <marquee behavior="flotante">Esto es un <code class="code-html">
+                            &lt;marquee behavior="scroll"&gt;</code>
+                            Los valores posibles en behavior son scroll, slide, y alternate. </marquee>
+                        <marquee behavior="slide">Esto es un <code class="code-html">
+                            &lt;marquee behavior="slide"&gt;</code>
+                            Los valores posibles en behavior son scroll, slide, y alternate. </marquee>
+                        <marquee behavior="alternate">Esto es un <code class="code-html">
+                            &lt;marquee behavior="alternate"&gt;</code> Los valores posibles en behavior
+                            son scroll, slide, y alternate. </marquee>
+                        <p>Lo que dice es: Esto es un <code class="code-html">&lt;marquee behavior="x"&gt;</code> Los
+                            valores posibles en behavior son scroll, slide, y alternate.<br><mark>Tristemente esta en
+                                proceso de eliminación y no se recomienda su uso.</mark></p>
+                    </details>
+
+                </article>
+
+            </section>
+            <hr class="non">
+            <section id="transiciones-animaciones">
+                <h2>Transiciones y animaciones</h2>
+                <div id="example-animation">
+                    <h3>¿Sabes quién es el de la foto?</h3>
+                    <label for="texto">Tu respuesta:</label>
+                    <input type="text" id="texto">
+                    <button id="btnmensaje" onclick="mensaje()">Enviar Respuesta</button>
+                    <p>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ Coloca el Mouse sobre la imágen</p>
+                    <img id="img-alan" alt="imagen" src="assets/img/alan turing.png" width="20%" name="img">
+                </div>
+                <h4>CSS de figuras:</h4>
+                <pre class="pre-largo"><code class="code-css">
+/*  Transiciones y Animaciones*/
+#example-animation {
+    display: block;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.animated-background {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    background-size: 800% 800%;
+    animation: GradientAnimation 10s ease infinite;
+}
+
+@keyframes GradientAnimation {
+    0% {
+        background-position: 0% 50%;
+        background-position-y: bottom;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        background-position-y: top;
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        background-position-y: bottom;
+    }
+}
+
+#img-alan {
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    transition: 3s;
+    border-radius: 10px;
+    width: 35%;
+    transform: translate(50%, 0%);
+}
+
+#img-alan:hover {
+    background: linear-gradient(200deg, #e4d833, #044dd6, #cf2dc7, #3dc713);
+    background-size: 800% 800%;
+    animation: GradientAnimation 10s ease-in-out infinite;
+    border-radius: 99%;
+    transform: translate(50%, 0%);
+    scale: 115%;
+}                                         
+                        </code></pre>
+            </section>
+            <hr class="par">
+            <section id="pseudoclases">
+                <h2>Pseudoclases en CSS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pseudoclase</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Enlace a MDN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>:hover</td>
+                            <td>Aplica estilos cuando el usuario coloca el cursor sobre un elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">a:hover { color: red; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:hover" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:active</td>
+                            <td>Aplica estilos cuando un elemento está siendo activado por el usuario.</td>
+                            <td><code class="code-css" title="Código CSS3">a:active { color: blue; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:active" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:focus</td>
+                            <td>Aplica estilos cuando un elemento ha recibido el foco.</td>
+                            <td><code class="code-css" title="Código CSS3">input:focus { border-color: green; }</code>
+                            </td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:focus" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:nth-child(n)</td>
+                            <td>Aplica estilos a un elemento que es el enésimo hijo de su padre.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">li:nth-child(2) { background-color: yellow; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:nth-child"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>:first-child</td>
+                            <td>Aplica estilos al primer hijo de su padre.</td>
+                            <td><code class="code-css" title="Código CSS3">p:first-child { font-weight: bold; }</code>
+                            </td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:first-child"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>:last-child</td>
+                            <td>Aplica estilos al último hijo de su padre.</td>
+                            <td><code class="code-css" title="Código CSS3">p:last-child { font-style: italic; }</code>
+                            </td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:last-child"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>:checked</td>
+                            <td>Aplica estilos a los elementos de formulario que están seleccionados.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">input:checked { background-color: blue; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:checked" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:disabled</td>
+                            <td>Aplica estilos a los elementos de formulario que están deshabilitados.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">input:disabled { background-color: gray; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:disabled"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>:enabled</td>
+                            <td>Aplica estilos a los elementos de formulario que están habilitados.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">input:enabled { background-color: white; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:enabled" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>:visited</td>
+                            <td>Aplica estilos a los enlaces que han sido visitados.</td>
+                            <td><code class="code-css" title="Código CSS3">a:visited { color: purple; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/:visited" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr class="non">
+            <section id="pseudoelementos">
+                <h2>Pseudoelementos en CSS</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pseudoelemento</th>
+                            <th>Descripción</th>
+                            <th>Ejemplo</th>
+                            <th>Enlace a MDN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>::before</td>
+                            <td>Inserta contenido antes del contenido de un elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">p::before { content: "Nota: "; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::before" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>::after</td>
+                            <td>Inserta contenido después del contenido de un elemento.</td>
+                            <td><code class="code-css" title="Código CSS3">p::after { content: " (fin)"; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::after" target="_blank">MDN</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>::first-line</td>
+                            <td>Aplica estilos a la primera línea de un elemento de bloque.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">p::first-line { font-variant: small-caps; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::first-line"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>::first-letter</td>
+                            <td>Aplica estilos a la primera letra de un elemento de bloque.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">p::first-letter { font-size: 2em; color: red; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::first-letter"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>::selection</td>
+                            <td>Aplica estilos a la parte de un documento que ha sido seleccionada por el usuario.</td>
+                            <td><code class="code-css"
+                                    title="Código CSS3">::selection { background: yellow; color: black; }</code></td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::selection"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                        <tr>
+                            <td>::placeholder</td>
+                            <td>Aplica estilos al texto de marcador de posición de un campo de entrada.</td>
+                            <td><code class="code-css" title="Código CSS3">input::placeholder { color: gray; }</code>
+                            </td>
+                            <td><a href="https://developer.mozilla.org/es/docs/Web/CSS/::placeholder"
+                                    target="_blank">MDN</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr class="par">
+            <section id="responsive">
+                <h2>Responsive Design</h2>
+                <article>
+                    <h3>¿Qué es el Diseño Responsive?</h3>
+                    <p>
+                        El diseño responsive permite que los sitios web se adapten automáticamente al tamaño y
+                        orientación de cualquier dispositivo, proporcionando una experiencia de usuario óptima. Esto se
+                        logra utilizando consultas de medios (<code class="code-css">@media</code>) en CSS para definir
+                        estilos específicos según las características del dispositivo, como su ancho de pantalla.
+                    </p>
+                </article>
+                <article>
+                    <h3>Medidas Estándar de Pantallas</h3>
+                    <ul>
+                        <li><strong>Dispositivos móviles:</strong> Ancho menor o igual a <code
+                                class="code-css">767px</code>.</li>
+                        <li><strong>Tablets:</strong> Ancho entre <code class="code-css">768px</code> y <code
+                                class="code-css">991px</code>.</li>
+                        <li><strong>Escritorio estándar:</strong> Ancho entre <code class="code-css">992px</code> y
+                            <code class="code-css">1199px</code>.</li>
+                        <li><strong>Pantallas grandes:</strong> Ancho mayor o igual a <code
+                                class="code-css">1200px</code>.</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Ejemplo de Consultas de Medios</h3>
+                    <p>
+                        A continuación, se muestran ejemplos de consultas de medios en CSS para diferentes tamaños de
+                        dispositivos. Puedes utilizarlas como base para construir tus propios estilos adaptativos:
+                    </p>
+                    <pre class="pre-largo" style="width: 100%;">
+            <code class="code-css">
+@media (max-width: 767px) {
+    /* Estilos para móviles */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Estilos para tablets */
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    /* Estilos para escritorio normal */
+}
+
+@media (min-width: 1200px) {
+    /* Estilos para pantallas grandes */
+}
+            </code>
+                    </pre>
+                </article>
+                <article>
+                    <h3>Más información</h3>
+                    <p>
+                        Para profundizar en los fundamentos del diseño responsive, consulta esta guía completa sobre
+                        <a href="https://lenguajecss.com/css/responsive-web-design/bases-responsive/" target="_blank"
+                            rel="noopener noreferrer">
+                            Bases de Responsive Design
+                        </a> en <strong>Lenguaje CSS</strong>.
+                    </p>
+                </article>
+            </section>
+            <hr class="non">
+            <section id="profundizarCSS">
+                <h2>Profundizar en CSS: SASS, LESS, WordPress, Bootstrap y Material Design</h2>
+                <article>
+                    <h3>LESS</h3>
+                    <p>
+                        LESS es un preprocesador CSS que amplía las capacidades del lenguaje, permitiendo el uso de
+                        variables, anidación de selectores, mixins, operaciones matemáticas y funciones. Su sintaxis
+                        simplificada permite escribir CSS de manera más eficiente y organizada. LESS se compila en CSS
+                        estándar para ser utilizado en el navegador o en proyectos web.
+                    </p>
+                </article>
+                <article>
+                    <h3>SASS</h3>
+                    <p>
+                        SASS (Syntactically Awesome Stylesheets) es otro preprocesador CSS ampliamente utilizado,
+                        conocido por su flexibilidad y características avanzadas. Ofrece dos sintaxis: SASS
+                        (independiente de llaves y puntos y coma) y SCSS (compatible con la sintaxis de CSS estándar).
+                        Permite el uso de variables, mixins, bucles, funciones y módulos, simplificando el mantenimiento
+                        y escalabilidad del código.
+                    </p>
+                </article>
+                <article>
+                    <h3>WordPress</h3>
+                    <p>
+                        WordPress es un sistema de gestión de contenidos (CMS) diseñado para crear sitios web y blogs.
+                        Se basa en PHP y MySQL, y cuenta con una enorme cantidad de temas y plugins que facilitan la
+                        personalización de diseño y funcionalidad. WordPress soporta el uso de CSS personalizado para
+                        modificar la apariencia de un sitio, además de permitir la integración con preprocesadores como
+                        SASS o LESS mediante plugins.
+                    </p>
+                </article>
+                <article>
+                    <h3>Bootstrap</h3>
+                    <p>
+                        Bootstrap es un framework CSS que simplifica la creación de sitios web responsivos y modernos.
+                        Incluye un sistema de rejillas, componentes predefinidos (como botones, tarjetas y modales) y
+                        utilidades CSS para personalización rápida. Su diseño "mobile-first" asegura que los sitios web
+                        se adapten de manera óptima a diferentes dispositivos y tamaños de pantalla.
+                    </p>
+                </article>
+                <article>
+                    <h3>Material Design</h3>
+                    <p>
+                        Material Design es un sistema de diseño desarrollado por Google que proporciona directrices
+                        visuales y de interacción para aplicaciones y sitios web. Se basa en principios como jerarquía
+                        visual, uso intencional del color, animaciones naturales y diseño responsivo. Material Design
+                        incluye componentes predefinidos y recursos para crear interfaces atractivas y consistentes.
+                    </p>
+                </article>
+            </section>
+            <hr class="par">
+            <section id="playground">
+                <h2>¿Quieres codificar? Playground MDN, IDE online</h2>
+                <p>También puedes modificar esta página web en: <a
+                        href="https://developer.mozilla.org/es/play?id=%2FkYDX41b2AXW7Cwh7I2iPVeWoox0QI%2BMVmgX%2FQuIj0ML%2FNlct9S%2FOhHDRwD6mfv0CXRWoRFtSPGuFMLK"
+                        target="_blank">Playground de MDN Docs Web</a>
+                </p>
+                <p>Pero te recomiendo como IDE en linea la página web: <a href="https://stackblitz.com"
+                        target="_blank">stackblitz.com</a>
+                </p>
+                <a href="playground.html" target="_blank">Ir a Playground</a>
+            </section>
+        </main>
+    </section>
+    <footer class="footer" id="footer-css">
+        <div>
+            <p>&copy; 2024 Rickylobu. Todos los derechos reservados.</p> <!-- Sección de Redes Sociales -->
+            <section class="social-media"> <a
+                    href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank"> <img src="https://www.svgrepo.com/show/13671/youtube.svg" alt="YouTube" width="30"
+                        height="30"> </a> <a
+                    href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank"> <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook" width="30" height="30"> </a> <a
+                    href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg"
+                        alt="Twitter" width="30" height="30"> </a> <a
+                    href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+                        alt="Instagram" width="30" height="30"> </a> <a
+                    href="https://www.linkedin.com/in/ricardo-l%C3%B3pez-arriaga-bueno-210393159/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn"
+                        width="30" height="30"> </a> <a href="https://github.com/rickylobu" target="_blank"> <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
+                        width="30" height="30"> </a> </section> <!-- Enlaces secundarios -->
+            <nav class="secondary-links"> <a href="#">Política de Privacidad</a> <a href="#">Términos de
+                    Servicio</a> <a href="#">Contacto</a> </nav>
+        </div>
+    </footer>
+    <script>
+
+        function mensaje() {
+            let ms = document.getElementById("texto");
+            
+            if (ms.value.toLowerCase() == "alan turing") {
+                alert('Tu Respuesta es correcta: ' + ms.value + " es ALAN TURING");
+            } else {
+                alert('Error! No es ' + ms.value + ", es ALAN TURING");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

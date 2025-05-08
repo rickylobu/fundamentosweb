@@ -1,0 +1,21 @@
+
+Rasterizado: Canvas
+Drag and Drop
+
+Manipulación de Strings y Expresiones Regulares (regex)
+Métodos Comunes para Manipulación de Strings
+substring(start, end): Extrae una parte de la cadena entre los índices start y end.
+
+slice(start, end): Similar a substring, pero permite índices negativos.
+
+split(separator): Divide una cadena en un array de subcadenas utilizando un separador.
+
+replace(searchValue, newValue): Reemplaza una parte de la cadena con otra.
+
+indexOf(searchValue): Devuelve el índice de la primera aparición de searchValue.
+
+match(regex): Utiliza expresiones regulares para buscar coincidencias en la cadena.
+
+trim(): Elimina los espacios en blanco al principio y al final de la cadena.
+
+Principios SOLID
