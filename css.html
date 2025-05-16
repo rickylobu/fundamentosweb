@@ -28,8 +28,10 @@
         </nav>
     </header>
     <section id="container">
-        <aside>
-            <ol>
+        <button class="menu-button" aria-label="Abrir menú">☰</button>
+        <aside id="sidebar">
+            <button class="close-menu" aria-label="Cerrar menú">✖</button>
+                    <ol>
                 <li><a href="#articleCSS">Artículo CSS3</a></li>
                 <li><a href="#anatomiaCSS">Anatomía de declaración CSS3</a></li>
                 <li><a href="#añadir-CSS-a-HTML">Añadir CSS a HTML</a></li>
@@ -45,18 +47,18 @@
                 <li><a href="#playground">¿Quieres codificar? Playground MDN, IDE online</a></li>
             </ol>
         </aside>
-        <main>
+        <main id="content">
             <section id="Clase-3-HTML-5.">
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/dcKATkXERpk?si=lNKwSBSKRUssxP3j"
-						title="Clase 4 CSS3." frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 4 CSS3.<a
-							href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
-							YouTube</a></figcaption>
-				</figure>
-			</section>
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dcKATkXERpk?si=lNKwSBSKRUssxP3j"
+                        title="Clase 4 CSS3." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 4 CSS3.<a
+                            href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
             <section id="articleCSS">
                 <article>
                     <header>
@@ -313,7 +315,8 @@
             <section id="box-model">
                 <h2>Modelo de caja en CSS: Box-model</h2>
                 <figure>
-                    <img src="assets/img/box-model-css.jpeg" alt="Modelo de caja en CSS" title="CSS Box-model" width="40%">
+                    <img src="assets/img/box-model-css.jpeg" alt="Modelo de caja en CSS" title="CSS Box-model"
+                        width="40%">
                     <figcaption>
                         Imágen del modelo de caja del inglés Box-model de <cite><a
                                 href="https://fedmentor.dev/posts/padding-margin/box-model-800w.jpeg">fedmentor</a></cite>
@@ -595,7 +598,8 @@ float: left;
 }
                     </code></pre>
                     <details>
-                        <summary><strong>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ ¿Quieres ver la etiqueta &lt;marquee&gt;?</strong></summary>
+                        <summary><strong>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ ¿Quieres ver la etiqueta &lt;marquee&gt;?</strong>
+                        </summary>
                         <marquee behavior="flotante">Esto es un <code class="code-html">
                             &lt;marquee behavior="scroll"&gt;</code>
                             Los valores posibles en behavior son scroll, slide, y alternate. </marquee>
@@ -854,7 +858,8 @@ float: left;
                         <li><strong>Tablets:</strong> Ancho entre <code class="code-css">768px</code> y <code
                                 class="code-css">991px</code>.</li>
                         <li><strong>Escritorio estándar:</strong> Ancho entre <code class="code-css">992px</code> y
-                            <code class="code-css">1199px</code>.</li>
+                            <code class="code-css">1199px</code>.
+                        </li>
                         <li><strong>Pantallas grandes:</strong> Ancho mayor o igual a <code
                                 class="code-css">1200px</code>.</li>
                     </ul>
@@ -991,7 +996,7 @@ float: left;
 
         function mensaje() {
             let ms = document.getElementById("texto");
-            
+
             if (ms.value.toLowerCase() == "alan turing") {
                 alert('Tu Respuesta es correcta: ' + ms.value + " es ALAN TURING");
             } else {
@@ -1000,6 +1005,8 @@ float: left;
         }
 
     </script>
+
+    <script src="responsive.js"></script>
 </body>
 
 </html>

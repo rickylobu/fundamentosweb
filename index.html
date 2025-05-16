@@ -7,7 +7,7 @@
     <title>1 HTML5</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="index.css">
-    
+
 </head>
 
 <body>
@@ -31,7 +31,9 @@
         </nav>
     </header>
     <div id="container">
-        <aside>
+        <button class="menu-button" aria-label="Abrir menú">☰</button>
+        <aside id="sidebar">
+            <button class="close-menu" aria-label="Cerrar menú">✖</button>
             <ol>
                 <li><a href="#primerEjercicio">Primer ejercico</a></li>
                 <li><a href="#articleHTML">Artículo HTML</a></li>
@@ -45,40 +47,40 @@
                 <li><a href="#playground">¿Quieres codificar? Playground MDN, IDE online</a></li>
             </ol>
         </aside>
-        <main>
+        <main id="content">
             <section id="clase-1-prsentacion-del-material-didactico.">
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC"
-						title="Clase 1 Prsentación del material didáctico." frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 1 Prsentación del material
-						didáctico.<a href="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC">@rickylobu en
-							YouTube</a></figcaption>
-				</figure>
-			</section>
-			<section id="clase-2-instalación-IDE-VScode-y-1er-ejemplo.">
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH"
-						title="Clase 2 Instalación IDE VScode y 1er ejemplo." frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 2 Instalación IDE VScode y 1er
-						ejemplo.<a href="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH">@rickylobu en
-							YouTube</a></figcaption>
-				</figure>
-			</section>
-			<section id="Clase-3-HTML-5.">
-				<figure>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP"
-						title="Clase 3 HTML 5." frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-						referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-					<figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 3 HTML 5.<a
-							href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
-							YouTube</a></figcaption>
-				</figure>
-			</section>
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC"
+                        title="Clase 1 Prsentación del material didáctico." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 1 Prsentación del material
+                        didáctico.<a href="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
+            <section id="clase-2-instalación-IDE-VScode-y-1er-ejemplo.">
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH"
+                        title="Clase 2 Instalación IDE VScode y 1er ejemplo." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 2 Instalación IDE VScode y 1er
+                        ejemplo.<a href="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
+            <section id="Clase-3-HTML-5.">
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP"
+                        title="Clase 3 HTML 5." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 3 HTML 5.<a
+                            href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
             <section id="primerEjercicio">
                 <h2 style="color:#568fa1;">Primer Ejercicio</h2>
                 <p>Esto es un parrafo</p>
@@ -155,13 +157,17 @@
                 <h2>Entidades HTML</h2>
                 <p>En HTML, algunos caracteres tienen un significado especial:</p>
                 <ul><!-- ul = Unorder List si quieres 1, 2, 3... utiliza ol = Order List -->
-                    <li><code class="code-html" title="Código HTML5"><strong>&amp;lt; y &amp;gt;</strong></code> representan los signos menor que (&lt;) y
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;lt; y &amp;gt;</strong></code>
+                        representan los signos menor que (&lt;) y
                         mayor
                         que (&gt;)
                     </li>
-                    <li><code class="code-html" title="Código HTML5"><strong>&amp;amp;</strong></code> representa el símbolo "Amperson" (&).</li>
-                    <li><code class="code-html" title="Código HTML5"><strong>&amp;quot;</strong></code> representa las comillas dobles (").</li>
-                    <li><code class="code-html" title="Código HTML5"><strong>&amp;apos;</strong></code> representa las comillas simples (').</li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;amp;</strong></code> representa el
+                        símbolo "Amperson" (&).</li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;quot;</strong></code> representa las
+                        comillas dobles (").</li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;apos;</strong></code> representa las
+                        comillas simples (').</li>
                 </ul>
                 <!--
                 &amp; = &
@@ -293,7 +299,8 @@
                                 <dd>Angular es una plataforma de desarrollo para construir <em>aplicaciones web móviles
                                         y de
                                         escritorio.</em> Es mantenida por Google y una comunidad de desarrolladores.
-                                    <cite><a href="https://angular.dev/" target="_blank">Angular</a></cite></dd>
+                                    <cite><a href="https://angular.dev/" target="_blank">Angular</a></cite>
+                                </dd>
                             </li>
                         </ol>
                     </dl>
@@ -402,7 +409,8 @@
                         <form action="#" method="GET">
                             <tr>
                                 <!-- Sintaxis de campo de texto para el nombre -->
-                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</strong><br>
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</strong><br>
                             &lt;input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre"&gt;</code>
                                 </td>
                                 <!-- Renderizado de campo de texto para el nombre -->
@@ -413,7 +421,8 @@
                             </tr>
                             <tr>
                                 <!-- Sintaxis de campo de correo electrónico -->
-                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;</strong><br>
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;</strong><br>
                             &lt;input type="email" id="email" name="email" required placeholder="Introduce tu correo"&gt;</code>
                                 </td>
                                 <!-- Renderizado de campo de correo electrónico -->
@@ -424,7 +433,8 @@
                             </tr>
                             <tr>
                                 <!-- Sintaxis de campo de contraseña -->
-                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="password"&gt;Contraseña:&lt;/label&gt;</strong><br>
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="password"&gt;Contraseña:&lt;/label&gt;</strong><br>
                             &lt;input type="password" id="password" name="password" required placeholder="Introduce tu contraseña"&gt;</code>
                                 </td>
                                 <!-- Renderizado de campo de contraseña -->
@@ -496,7 +506,8 @@
                             </tr>
                             <tr>
                                 <!-- Sintaxis de campo de número -->
-                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="numero"&gt;Introduce un número:&lt;/label&gt;</strong><br>
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="numero"&gt;Introduce un número:&lt;/label&gt;</strong><br>
                             &lt;input type="number" id="numero" name="numero" min="0" max="10" step="1" value="5"&gt;</code>
                                 </td>
                                 <!-- Renderizado de campo de número -->
@@ -506,7 +517,8 @@
                             </tr>
                             <tr>
                                 <!-- Sintaxis de campo de rango -->
-                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="rango"&gt;Selecciona un valor:&lt;/label&gt;</strong><br>
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="rango"&gt;Selecciona un valor:&lt;/label&gt;</strong><br>
                             &lt;input type="range" id="rango" name="rango" min="0" max="100" step="10" value="50"&gt;</code>
                                 </td>
                                 <!-- Renderizado de campo de rango -->
@@ -570,14 +582,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <p><code class="code-html" title="Código HTML5"><strong>&lt;input type="submit"&gt;</strong></code>: Úsalo cuando necesites
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;input type="submit"&gt;</strong></code>:
+                                        Úsalo cuando necesites
                                         un
                                         botón simple para enviar el formulario.</p>
-                                    <p><code class="code-html" title="Código HTML5"><strong>&lt;input type="button"&gt;</strong></code>: Úsalo cuando necesites
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;input type="button"&gt;</strong></code>:
+                                        Úsalo cuando necesites
                                         un
                                         botón que no envíe el formulario y que realice una acción específica mediante
                                         JavaScript.</p>
-                                    <p><code class="code-html" title="Código HTML5"><strong>&lt;button&gt;</strong></code>: Úsalo cuando necesites más
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;button&gt;</strong></code>: Úsalo cuando
+                                        necesites más
                                         flexibilidad, como añadir contenido HTML dentro del botón (por ejemplo, imágenes
                                         o
                                         íconos) o cuando necesites diferentes tipos de botones (submit, reset, button).
@@ -727,6 +745,7 @@
         </div>
     </footer>
 
+    <script src="responsive.js"></script>
 </body>
 
 </html>
