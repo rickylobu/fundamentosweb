@@ -470,6 +470,8 @@ section {
 
 /*  Estilos de Disposición general de aside y main  */
 #container {
+    width: 100vw;
+    min-width: 100%;
     display: flex;
     gap: 2%;
 }
@@ -716,6 +718,8 @@ button {
     margin-top: 20px;
 }
 
+
+/* Estilos Responsive */
 /* Estilos por defecto (desktop) */
 #sidebar {
     display: block;
@@ -779,33 +783,80 @@ button {
     #content {
         width: 90%;
     }
-}
 
-@media (max-width: 350px) {
     #header-html {
-        width: 200vw;
+        width: 115vw;
+    }
+
+    header>nav ol {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav>section>ol>li {
+        display: contents;
     }
 
     #content {
-        width: 90%;
+        width: 100vw;
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        margin-top: 10px;
+        margin-left: 2%;
     }
+
+    #content figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #content figure>iframe,#content figure>video {
+        width: 100%;
+        height: auto;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
 }
 
-/* TABLETS: 768px–991px */
-@media (min-width: 768px) and (max-width: 991px) {
+/* TABLETS: 768px – grandes */
+@media (min-width: 768px)  {
+    /* Cabecera */
+    #header-html {
+        width: 100vw;
+    }
+    header > nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+    }
+    header > nav ol {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
 
-    /* idéntico a móviles, pero ajusta tamaños si quieres */
+    /* Sidebar oculto y botón de menú */
     #sidebar {
         display: none;
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 80%;
+        top: 0; left: 0;
+        width: 75%;
+        max-width: 300px;
         height: 100vh;
+        background: #fff;
         z-index: 1000;
-        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+        overflow-y: auto;
     }
-
     .menu-button {
         display: block;
         position: fixed;
@@ -817,27 +868,15 @@ button {
         max-height: 3.5rem;
     }
 
+    /* Contenido principal ajustado */
     #content {
-        justify-content: center;
+        margin-left: 0;
+        padding: 1rem;
+        width: 100vw;
+    }
+    #content figure {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        padding: 5px;
-        width: fit-content;
-    }
-}
-
-/* Desktop amplio: >992px */
-@media (min-width: 992px) {
-    #sidebar {
-        display: block;
-        position: static;
-        width: 20%;
-    }
-
-    .menu-button {
-        display: none;
-    }
-
-    .close-menu {
-        display: none;
     }
 }
