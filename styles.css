@@ -33,6 +33,14 @@ dependiendo en qué página esta */
     background-color: #2965F1;
 }
 
+#header-playground,
+#footer-playground {
+    background-color: #1F1F1F;
+    
+}
+#footer-playground>div>p,#footer-playground>div> nav>a {
+    color: white;
+}
 
 header>nav>figure {
     margin: 0;
