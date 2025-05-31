@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 HTML5</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header id="header-html">
+        <nav style="display: flex; align-items: center;">
+            <figure> <!-- La etiqueta <figure> agrupa contenido multimedia como imágenes y sus descripciones -->
+                <a href="index.html">
+                    <img src="assets/img/HTML5.png" alt="Imágen de HTML5" title="HTML5" width="100px" />
+                </a>
+                <figcaption>Logo de HTML5</figcaption>
+            </figure>
+            <section style="display: block;">
+                <h1>Curso de desarrollo de aplicaciones Web</h1>
+                <ol style="display: flex;">
+                    <li style="margin-left: 30px"><a href="index.html">Inicio</a></li>  
+                    <li style="margin-left: 30px"><a href="mihtml.html">HTML5</a></li> 
+                    <li style="margin-left: 30px"><a href="css.html">CSS3</a></li>
+                    <li style="margin-left: 30px"><a href="javascript.html">JavaScript</a></li>
+                    <li style="margin-left: 30px"><a href="playground.html">Playground</a></li>
+                </ol>
+            </section>
+        </nav>
+    </header>
+    <div id="container">
+        <button class="menu-button" aria-label="Abrir menú">☰</button>
+        <aside id="sidebar">
+            <button class="close-menu" aria-label="Cerrar menú">✖</button>
+            <ol>
+                <li><a href="#primerEjercicio">Primer ejercico</a></li>
+                <li><a href="#articleHTML">Artículo HTML</a></li>
+                <li><a href="#entidadesHTML">Entidades HTML</a></li>
+                <li><a href="#estructuraHTML">Etsructura HTML con &lt;pre&gt; y &lt;code&gt;</a></li>
+                <li><a href="#cuadrosDialog">Cuadros de dialogo</a></li>
+                <li><a href="#listaDefiniciones">Lista de definiciones</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="#formularios">Formularios</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#playground">¿Quieres codificar? Playground MDN, IDE online</a></li>
+            </ol>
+        </aside>
+        <main id="content">
+            <section id="clase-1-prsentacion-del-material-didactico.">
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC"
+                        title="Clase 1 Prsentación del material didáctico." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 1 Prsentación del material
+                        didáctico.<a href="https://www.youtube.com/embed/NsQQnqn65Kg?si=xs1cVbOu-r71iyEC">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
+            <section id="clase-2-instalación-IDE-VScode-y-1er-ejemplo.">
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH"
+                        title="Clase 2 Instalación IDE VScode y 1er ejemplo." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 2 Instalación IDE VScode y 1er
+                        ejemplo.<a href="https://www.youtube.com/embed/teLA3CXYx4Q?si=fly2GzGv1uNVJAIH">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
+            <section id="Clase-3-HTML-5.">
+                <figure>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP"
+                        title="Clase 3 HTML 5." frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite>Clase 3 HTML 5.<a
+                            href="https://www.youtube.com/embed/ChZggfJYOi4?si=bEx9Szf0eEMFfTNP">@rickylobu en
+                            YouTube</a></figcaption>
+                </figure>
+            </section>
+            <section id="primerEjercicio">
+                <h2 style="color:#568fa1;">Primer Ejercicio</h2>
+                <p>Esto es un parrafo</p>
+                <label>Nombre:</label><br><input type="text" id="nombreEjercicio" />
+                <input type="button" value="No me hagas Click!"
+                    onclick="alert(`hola ${nombreEjercicio.value}, ` +'Te dije que no me hicieras Click!')"></input>
+            </section>
+            <hr class="even">
+            <section id="articleHTML">
+                <article>
+                    <header>
+                        <h2>HTML: Lenguaje de etiquetado de hipertexto</h2>
+                        <p>
+                        <address>Escrito por: <a href="correo_del_autor@ejemplo.com" target="_blank">Ricardo López
+                                Arriaga
+                                Bueno</a></address>
+                        <time datetime="2024-11-25">25 de Noviembre de 2024</time>
+                        </p>
+                    </header>
+                    <section>
+                        <blockquote cite="https://developer.mozilla.org/es/docs/Web/HTML">
+                            <!-- <blockquote> define una cita textual de una fuente externa -->
+                            <p>
+                                "HTML (Lenguaje de Marcas de Hipertexto, del inglés HyperText Markup Language) es el
+                                componente más básico de la Web. Define el significado y la estructura del contenido
+                                web."
+                                <cite> <!-- <cite> identifica la fuente de la cita -->
+                                    <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web
+                                        Docs</a></cite>
+                            </p>
+                        </blockquote>
+                        <p>Tarea: Parte de tu tarea es leer la investigación de este material didáctico para el
+                            desarrollo de aplicaciones Web de donde se saco la siguinete cita, el documento es: <a
+                                href="https://drive.google.com/drive/folders/1u9aEyHMHketZPjJ_ffaE5zb4ehfXASe9">Historia
+                                y
+                                fundamentos de la Web</a></p>
+                        <blockquote cite="https://drive.google.com/drive/folders/1u9aEyHMHketZPjJ_ffaE5zb4ehfXASe9">
+                            "Timothy Berners-Lee en 1991, quien trabajaba en el CERN, crea la World Wide Web, que es una
+                            forma de relacionar hipertexto. También crea el llamado HTML (Hypertext Markup Language),
+                            siendo
+                            el lenguaje de etiquetado de marca, la estructura principal de una página web actual. Para
+                            la
+                            cual creó HTTP (protocolo de transferencia de hipertexto, para transmitir datos entre las
+                            páginas web). Además, crea la llamada URL (localizador uniforme de recursos, una forma de
+                            indicar la dirección de una página web determinada). URL (Universal Resource Locator), que
+                            es la
+                            dirección de una página web como la conocemos hoy en día con 'www.' Entendiendo qué es la
+                            World
+                            Wide Web, básicamente es la forma de localizar cualquier documento en cualquier computadora
+                            conectada a la red, incluso buscando por palabras clave."
+                            <cite><a href="https://drive.google.com/drive/folders/1u9aEyHMHketZPjJ_ffaE5zb4ehfXASe9"
+                                    target="_blank">Historia
+                                    y fundamentos de la Web</a></cite>
+                        </blockquote>
+                        <p>Para profundizar en el tema consulta la <a href="https://www.w3.org/History.html"
+                                target="_blank">historia de la
+                                Web en W3C</a>. W3C marca los estandares de HTML y CSS, una cita relevante para que
+                            visiten
+                            la página sería: </p>
+                        <blockquote cite="https://www.w3.org/standards/">
+                            "La plataforma continúa expandiéndose, pero los usuarios de la web se han unido hace mucho
+                            tiempo en torno a HTML como la piedra angular de la web. Muchas más tecnologías que el W3C y
+                            sus
+                            socios están creando amplían la web y le dan toda su fuerza, incluyendo CSS, SVG, WOFF,
+                            WebRTC,
+                            XML y una variedad cada vez mayor de API."
+                            <cite><a href="https://www.w3.org/standards/" target="_blank">W3C Web Standards</a></cite>
+                        </blockquote>
+                    </section>
+                </article>
+            </section>
+            <hr class="odd">
+            <section id="entidadesHTML">
+                <h2>Entidades HTML</h2>
+                <p>En HTML, algunos caracteres tienen un significado especial:</p>
+                <ul><!-- ul = Unorder List si quieres 1, 2, 3... utiliza ol = Order List -->
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;lt; y &amp;gt;</strong></code>
+                        representan los signos menor que (&lt;) y
+                        mayor
+                        que (&gt;)
+                    </li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;amp;</strong></code> representa el
+                        símbolo "Amperson" (&).</li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;quot;</strong></code> representa las
+                        comillas dobles (").</li>
+                    <li><code class="code-html" title="Código HTML5"><strong>&amp;apos;</strong></code> representa las
+                        comillas simples (').</li>
+                </ul>
+                <!--
+                &amp; = &
+                &lt; = <
+                &gt; = >
+                &quot; = "
+                &apos; ' 
+             -->
+            </section>
+            <hr class="even">
+            <section id="estructuraHTML">
+                <h2>Estructura de una página Web</h2>
+                <details>
+                    <summary>╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ Quieres un buen consejo?</summary>
+                    <p>Se recomienda inspeccionar esta página con F12</p>
+                    <p>&lt;summary&gt; se utiliza para crear un elemento desplegable que permite ocultar o mostrar
+                        contenido
+                        adicional.</p>
+                </details>
+                <p>Este es un bloque de código con &lt;code&gt; y &lt;pre&gt;</p>
+                <!--  <pre> le dice al nevegador que respete 
+                    la sintaxis y mantiene los espacios en blanco,
+                    tabulaciones y saltos de línea, mostrando el
+                    texto exactamente como se escribe en el HTML. -->
+                <pre><code class="code-html" title="Código HTML5">
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Título de la web&lt;/title&gt;
+            &lt;/head&gt; 
+            &lt;body&gt;
+                &lt;p&gt;Esta es la estructura de una página Web&lt;/p&gt;
+            &lt;/body&gt; 
+        &lt;/html&gt;
+    </code></pre>
+            </section>
+            <hr class="odd">
+            <section id="cuadrosDialog">
+                <h2>Cuadros de Dialogo:</h2>
+                <dialog id="myDialog">
+                    <p>Este es un cuadro de diálogo.</p>
+                    <h5> ╭☞( ͡ ͡° ͜ ʖ ͡͡°)╭☞ Sería una buena idea investigar la etiqueta &lt;template&gt; ;D<br>y
+                        códigos
+                        Unicode, por ejemplo con F12 podrás ver el emoticone: &#x256D;&#x261E;( &#x0361;&#x00B0;
+                        &#x035C;&#x0296; &#x0361;&#x00B0;)&#x256D;&#x261E;</h5>
+                    <button onclick="myDialog.close()">Cerrar</button>
+                </dialog>
+                <button onclick="myDialog.showModal()">Abrir Diálogo</button>
+            </section>
+            <hr class="even">
+            <section id="listaDefiniciones"><!-- Sección de Lista de definiciones-->
+                <fieldset>
+                    <legend>
+                        <h2>Lista de definiciones:</h2>
+                    </legend>
+                    <dl> <!-- description list-->
+                        <ol> <!-- order list-->
+                            <li>
+                                <dt>HTML</dt>
+                                <dd>HTML (Lenguaje de Marcas de Hipertexto, del inglés <q>HyperText Markup Language</q>)
+                                    es el
+                                    componente más básico de la Web. Define el significado y la estructura del contenido
+                                    web.
+                                    <cite><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN
+                                            Web
+                                            Docs</a></cite>
+                                </dd>
+                            </li>
+                            <li>
+                                <dt>CSS</dt>
+                                <dd>CSS (Cascading Style Sheets) es un lenguaje de diseño gráfico para definir y crear
+                                    la
+                                    presentación de un documento estructurado escrito en HTML o XML. <cite><a
+                                            href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank">MDN Web
+                                            Docs</a></cite>
+                                </dd>
+                            </li>
+                            <li>
+                                <dt>JavaScript</dt>
+                                <dd>JavaScript es un lenguaje de programación que permite implementar funciones
+                                    complejas en
+                                    páginas web. <cite><a href="https://developer.mozilla.org/es/docs/Web/JavaScript"
+                                            target="_blank">MDN
+                                            Web Docs</a></cite></dd>
+                            </li>
+                            <li>
+                                <dt>W3C</dt>
+                                <dd>El World Wide Web <i>Consortium</i> (<i>W3C</i>) es una comunidad internacional que
+                                    desarrolla
+                                    estándares
+                                    abiertos para asegurar el crecimiento a largo plazo de la Web. <cite><a
+                                            href="https://www.w3.org/" target="_blank">W3C</a></cite></dd>
+                            </li>
+                            <li>
+                                <dt>CERN</dt>
+                                <dd>El CERN es la Organización Europea para la Investigación Nuclear, donde se creó la
+                                    World
+                                    Wide Web en 1989 por <cite><a href="https://www.w3.org/People/Berners-Lee/"
+                                            target="_blank"><mark><strong>Tim
+                                                    Berners-Lee</strong></mark></a></cite> <mark
+                                        style="background-color: aqua;">creador del HTML.</mark>
+                                    <cite><a href="https://home.cern/">CERN</a></cite>
+                                </dd>
+                            </li>
+                            <li>
+                                <dt>TypeScript</dt>
+                                <dd><span style="color: red;">TypeScript</span> es un lenguaje de programación
+                                    desarrollado y mantenido por <span style="color: red;">Microsoft</span>. Es un
+                                    superconjunto de JavaScript que añade tipos estáticos opcionales. <cite><a
+                                            href="https://www.typescriptlang.org/" target="_blank">TypeScript</a></cite>
+                                </dd>
+                            </li>
+                            <li>
+                                <dt>Framework</dt>
+                                <dd>Un framework es una estructura de soporte en la que un software puede ser organizado
+                                    y
+                                    desarrollado. Proporciona una base sobre la cual los desarrolladores pueden
+                                    construir
+                                    programas para una plataforma específica. <cite><a
+                                            href="https://developer.mozilla.org/es/docs/Glossary/Framework"
+                                            target="_blank">MDN
+                                            Web
+                                            Docs</a></cite></dd>
+                            </li>
+                            <li>
+                                <dt>Angular</dt>
+                                <dd>Angular es una plataforma de desarrollo para construir <em>aplicaciones web móviles
+                                        y de
+                                        escritorio.</em> Es mantenida por Google y una comunidad de desarrolladores.
+                                    <cite><a href="https://angular.dev/" target="_blank">Angular</a></cite>
+                                </dd>
+                            </li>
+                        </ol>
+                    </dl>
+                </fieldset>
+            </section>
+            <hr class="odd">
+            <section id="tablas">
+                <h2>Tablas:</h2>
+                <table>
+                    <caption>
+                        <h3>Lenguajes de Este Curso</h3>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Lenguaje</th>
+                            <th>Función en la Web</th>
+                            <th>Organización de Estándar</th>
+                            <th>Estándar Actual</th>
+                            <th>Uso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td>Estructura del contenido web</td>
+                            <td>W3C</td>
+                            <td>HTML5</td>
+                            <td>Producción</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>Estilo y diseño del contenido web</td>
+                            <td>W3C</td>
+                            <td>CSS3</td>
+                            <td>Producción</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Interactividad y comportamiento del contenido web</td>
+                            <td>ECMA International</td>
+                            <td>ECMAScript 2024</td>
+                            <td>Producción</td>
+                        </tr>
+                        <tr>
+                            <td>TypeScript</td>
+                            <td>Superset de JavaScript con tipos estáticos</td>
+                            <td>Microsoft</td>
+                            <td>TypeScript 4.8</td>
+                            <td>Desarrollo</td>
+                        </tr>
+                        <tr>
+                            <td>Angular</td>
+                            <td>Framework para aplicaciones web</td>
+                            <td>Google</td>
+                            <td>Angular 18</td>
+                            <td>Desarrollo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr class="even">
+            <section id="formularios">
+                <h2>Formularios:</h2>
+                <!--  De tarea te recomiendo investigar sobre métodos que se utilizan en los
+               formularios: Métodos de petición HTTP (GET, POST, PUT, DELETE, etc...)
+                en https://developer.mozilla.org/es/docs/Web/HTTP/Methods 
+                
+                Validación de formularios con required: Campo obligatorio.
+                pattern: Define una expresión regular para validar el formato de un campo.
+                min y max: Para limitar los valores en campos numéricos o de fecha.-->
+                <details>
+                    <summary>( ͡ ͡° ͜ ʖ ͡͡°) Te recomiendo también!</summary>
+                    <p>&#x256D;&#x261E;De tarea, investigar sobre métodos que se utilizan en los
+                        formularios: Métodos de petición HTTP (GET, POST, PUT, DELETE, etc...)
+                        en el sitio de MDN Web Docs: <strong><a
+                                href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods" target="_blank">Métodos de
+                                petición HTTP</a></strong>
+                        y sobre los <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status/200"
+                            target="_blank">Códigos
+                            de estado de HTTP</a></p>
+                    <p>&#x256D;&#x261E;Investiga también sobre "Validación de formularios" por ejemplo:<br>
+                        con required: Campo obligatorio.<br>
+                        pattern: Define una expresión regular para validar el formato de un campo.<br>
+                        min y max: Para limitar los valores en campos numéricos o de fecha.</p>
+                </details>
+                <dialog id="dialogSintaxisForm">
+                    <p>La columna de sintaxis HTML no contiene los &amp;lt;br&amp;gt; = &lt;br&gt; para salto de linea,
+                        se
+                        recomienda inspeccionar con F12</p>
+                    <button onclick="dialogSintaxisForm.close()">Cerrar</button>
+                </dialog>
+                <button onclick="dialogSintaxisForm.showModal()">Nota de Sintaxis HTML</button>
+
+                <table>
+                    <caption>
+                        <h3>Sintaxis y Renderizado de formularios</h3>
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Sintaxis HTML</th>
+                            <th>Renderizado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Comienza el formulario -->
+                        <form action="#" method="GET">
+                            <tr>
+                                <!-- Sintaxis de campo de texto para el nombre -->
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;</strong><br>
+                            &lt;input type="text" id="nombre" name="nombre" required placeholder="Introduce tu nombre"&gt;</code>
+                                </td>
+                                <!-- Renderizado de campo de texto para el nombre -->
+                                <td><label for="nombre">Nombre:</label><br>
+                                    <input type="text" id="nombre" name="nombre" required
+                                        placeholder="Introduce tu nombre">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de correo electrónico -->
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="email"&gt;Correo electrónico:&lt;/label&gt;</strong><br>
+                            &lt;input type="email" id="email" name="email" required placeholder="Introduce tu correo"&gt;</code>
+                                </td>
+                                <!-- Renderizado de campo de correo electrónico -->
+                                <td><label for="email">Correo electrónico:</label><br>
+                                    <input type="email" id="email" name="email" required
+                                        placeholder="Introduce tu correo">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de contraseña -->
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="password"&gt;Contraseña:&lt;/label&gt;</strong><br>
+                            &lt;input type="password" id="password" name="password" required placeholder="Introduce tu contraseña"&gt;</code>
+                                </td>
+                                <!-- Renderizado de campo de contraseña -->
+                                <td><label for="password">Contraseña:</label><br>
+                                    <input type="password" id="password" name="password" required
+                                        placeholder="Introduce tu contraseña">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de fecha -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="fecha"&gt;Fecha de nacimiento:&lt;/label&gt;</strong><br>
+                            &lt;input type="date" id="fecha" name="fecha"&gt;</code></td>
+                                <!-- Renderizado de campo de fecha -->
+                                <td><label for="fecha">Fecha de nacimiento:</label><br>
+                                    <input type="date" id="fecha" name="fecha">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de selección (lista desplegable) -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="pais"&gt;País:&lt;/label&gt;</strong><br>
+                            &lt;select id="pais" name="pais"&gt;<br>
+                            &lt;option value="mexico"&gt;México&lt;/option&gt;<br>
+                            &lt;option value="españa"&gt;España&lt;/option&gt;<br>
+                            &lt;option value="argentina"&gt;Argentina&lt;/option&gt;<br>
+                            &lt;/select&gt;</code></td>
+                                <!-- Renderizado de campo de selección (lista desplegable) -->
+                                <td><label for="pais">País:</label><br>
+                                    <select id="pais" name="pais">
+                                        <option value="mexico">México</option>
+                                        <option value="españa">España</option>
+                                        <option value="argentina">Argentina</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de selección múltiple (lista desplegable con múltiples opciones) -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="hobbies"&gt;Hobbies:&lt;/label&gt;</strong><br>
+                            &lt;select id="hobbies" name="hobbies" multiple&gt;<br>
+                            &lt;option value="deporte"&gt;Deporte&lt;/option&gt;<br>
+                            &lt;option value="musica"&gt;Música&lt;/option&gt;<br>
+                            &lt;option value="lectura"&gt;Lectura&lt;/option&gt;<br>
+                            &lt;/select&gt;</code></td>
+                                <!-- Renderizado de campo de selección múltiple -->
+                                <td><label for="hobbies">Hobbies:</label><br>
+                                    <select id="hobbies" name="hobbies" multiple>
+                                        <option value="deporte">Deporte</option>
+                                        <option value="musica">Música</option>
+                                        <option value="lectura">Lectura</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de casilla de verificación -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="suscripcion"&gt;Suscribirse a nuestro boletín:&lt;/label&gt;</strong><br>
+                            &lt;input type="checkbox" id="suscripcion" name="suscripcion" checked&gt;</code></td>
+                                <!-- Renderizado de casilla de verificación -->
+                                <td><label for="suscripcion">Suscribirse a nuestro boletín:</label><br>
+                                    <input type="checkbox" id="suscripcion" name="suscripcion" checked>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de color -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="color"&gt;Selecciona tu color favorito:&lt;/label&gt;</strong><br>
+                            &lt;input type="color" id="color" name="color"&gt;</code></td>
+                                <!-- Renderizado de campo de color -->
+                                <td><label for="color">Selecciona tu color favorito:</label><br>
+                                    <input type="color" id="color" name="color">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de número -->
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="numero"&gt;Introduce un número:&lt;/label&gt;</strong><br>
+                            &lt;input type="number" id="numero" name="numero" min="0" max="10" step="1" value="5"&gt;</code>
+                                </td>
+                                <!-- Renderizado de campo de número -->
+                                <td><label for="numero">Introduce un número:</label><br>
+                                    <input type="number" id="numero" name="numero" min="0" max="10" step="1" value="5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de rango -->
+                                <td><code class="code-html"
+                                        title="Código HTML5"><strong>&lt;label for="rango"&gt;Selecciona un valor:&lt;/label&gt;</strong><br>
+                            &lt;input type="range" id="rango" name="rango" min="0" max="100" step="10" value="50"&gt;</code>
+                                </td>
+                                <!-- Renderizado de campo de rango -->
+                                <td><label for="rango">Selecciona un valor:</label><br>
+                                    <input type="range" id="rango" name="rango" min="0" max="100" step="10" value="50">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de teléfono -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="telefono"&gt;Número de teléfono:&lt;/label&gt;</strong><br>
+                            &lt;input type="tel" id="telefono" name="telefono" placeholder="123-45-678"&gt;</code></td>
+                                <!-- Renderizado de campo de teléfono -->
+                                <td><label for="telefono">Número de teléfono:</label><br>
+                                    <input type="tel" id="telefono" name="telefono" placeholder="123-45-678">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de archivo -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="archivo"&gt;Selecciona un archivo:&lt;/label&gt;</strong><br>
+                            &lt;input type="file" id="archivo" name="archivo"&gt;</code></td>
+                                <!-- Renderizado de campo de archivo -->
+                                <td><label for="archivo">Selecciona un archivo:</label><br>
+                                    <input type="file" id="archivo" name="archivo">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de URL -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="url"&gt;Introduce una URL:&lt;/label&gt;</strong><br>
+                            &lt;input type="url" id="url" name="url" placeholder="https://example.com"&gt;</code></td>
+                                <!-- Renderizado de campo de URL -->
+                                <td><label for="url">Introduce una URL:</label><br>
+                                    <input type="url" id="url" name="url" placeholder="https://example.com">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de campo de búsqueda -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="buscar"&gt;Buscar:&lt;/label&gt;</strong><br>
+                            &lt;input type="search" id="buscar" name="buscar" placeholder="Buscar..."&gt;</code></td>
+                                <!-- Renderizado de campo de búsqueda -->
+                                <td><label for="buscar">Buscar:</label><br>
+                                    <input type="search" id="buscar" name="buscar" placeholder="Buscar...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de barra de progreso (progress) -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="progreso"&gt;Progreso de carga:&lt;/label&gt;</strong><br>
+                &lt;progress id="progreso" value="70" max="100"&gt;70%&lt;/progress&gt;</code></td>
+                                <!-- Renderizado de barra de progreso -->
+                                <td><label for="progreso">Progreso de carga:</label><br>
+                                    <progress id="progreso" value="70" max="100">70%</progress>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- Sintaxis de medidor (meter) -->
+                                <td><code class="code-html" title="Código HTML5"><strong>&lt;label for="nivel"&gt;Nivel de batería:&lt;/label&gt;</strong><br>
+                &lt;meter id="nivel" value="0.6" min="0" max="1"&gt;60%&lt;/meter&gt;</code></td>
+                                <!-- Renderizado de medidor -->
+                                <td><label for="nivel">Nivel de batería:</label><br>
+                                    <meter id="nivel" value="0.6" min="0" max="1">60%</meter>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;input type="submit"&gt;</strong></code>:
+                                        Úsalo cuando necesites
+                                        un
+                                        botón simple para enviar el formulario.</p>
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;input type="button"&gt;</strong></code>:
+                                        Úsalo cuando necesites
+                                        un
+                                        botón que no envíe el formulario y que realice una acción específica mediante
+                                        JavaScript.</p>
+                                    <p><code class="code-html"
+                                            title="Código HTML5"><strong>&lt;button&gt;</strong></code>: Úsalo cuando
+                                        necesites más
+                                        flexibilidad, como añadir contenido HTML dentro del botón (por ejemplo, imágenes
+                                        o
+                                        íconos) o cuando necesites diferentes tipos de botones (submit, reset, button).
+                                    </p>
+                                </td>
+                                <td>
+                                    <button type="submit">Submit</button>
+                                    <button type="reset">Reset</button>
+                                    <button type="button"
+                                        onclick="alert('Botón de formulario clickeado pero no enviado!')">Click
+                                        me</button>
+                                </td>
+                            </tr>
+                        </form>
+                        <!-- Fin del formulario -->
+                    </tbody>
+                </table>
+            </section>
+            <hr class="odd">
+            <section id="multimedia">
+                <h2>Multimedia</h2>
+                <h3>&lt;audio&gt;, &lt;Video&gt; y &lt;iframe&gt;</h3>
+
+                <!-- Reproductor de Audio -->
+
+                <div>
+                    <h4>Reproductor de Audio "Kerido Auditor"</h4>
+                    <figure>
+                        <audio controls>
+                            <source src="assets/audio/kerido_auditor_FrankT_90Kilos.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <figcaption>
+                            Canción de <cite>
+                                <a href="https://www.youtube.com/watch?v=Fv4AyUWuY5M&ab_channel=FrankT-Topic">Frank
+                                    T. "Kerido Auditor." YouTube, subido por Frank T - Topic <time
+                                        datetime="2001">2001</time></a>
+                            </cite>.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <br><br>
+
+                <!-- Reproductor de Video -->
+                <div>
+                    <h4>Reproductor de Video "Queen"</h4>
+                    <figure>
+                        <video controls width="640">
+                            <source src="assets/video/Do.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <figcaption>Vídeo de Queen. <cite><a
+                                    href="https://www.youtube.com/watch?v=hBp4dgE7Bho&ab_channel=Queen-Topic">"Don't
+                                    Stop Me
+                                    Now." YouTube, subido por Queen - Topic,
+                                    <time datetime="1979-01-26">26 de Enero de 1979</time></a></cite>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <h4>Reproductor de Video "2Cellos"</h4>
+                    <figure>
+                        <video controls width="640">
+                            <source src="assets/video/2CELLOS   Thunderstruck [OFFICIAL VIDEO].mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                        <figcaption>
+                            Vídeo de <cite><a
+                                    href="https://www.youtube.com/watch?v=uT3SBzmDxGk&ab_channel=2CELLOS">2CELLOS.
+                                    "Thunderstruck." YouTube, subido por 2CELLOS - Topic, <time datetime="2014-02-18">18
+                                        de Febrero de 2014</time></a></cite>.
+                        </figcaption>
+                    </figure>
+                </div>
+                <div>
+                    <h4>&lt;iframe&gt; incrustación Vídeo de "YouTube"</h4>
+                    <figure>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/NsQQnqn65Kg?si=mxdpp_2ZWzzk3kjv"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <figcaption>Vídeo de <cite>Ricardo López Arriaga Bueno </cite><a
+                                href="https://www.youtube.com/embed/NsQQnqn65Kg?si=mxdpp_2ZWzzk3kjv">@rickylobu en
+                                YouTube</a></figcaption>
+                    </figure>
+                </div>
+            </section>
+            <hr class="even">
+            <section id="playground">
+                <h2>¿Quieres codificar? Playground MDN, IDE online</h2>
+                <p>También puedes modificar esta página web en: <a
+                        href="https://developer.mozilla.org/es/play?id=ceUS8WA4Aao6KwO4%2Bp2SVIwoJlBjxwMOEo5xqWcXw7Vzc7DBj%2BjfJfMR1Jf13JKBOuJ91cSodKwIajZD"
+                        target="_blank">Playground de MDN Docs Web</a>
+                </p>
+                <p>Pero te recomiendo como IDE en linea la página web: <a href="https://stackblitz.com"
+                        target="_blank">stackblitz.com</a>
+                </p>
+                <a href="playground.html">Ir a Playground</a>
+            </section>
+        </main>
+    </div>
+    <footer class="footer" id="footer-html">
+        <div>
+            <p>&copy; 2024 Rickylobu. Todos los derechos reservados.</p>
+
+            <!-- Sección de Redes Sociales -->
+            <section style="margin-bottom: 15px;">
+                <a href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank" style="margin: 0 10px;">
+                    <img src="https://www.svgrepo.com/show/13671/youtube.svg" alt="YouTube" width="30" height="30"
+                        style="vertical-align: middle;">
+                </a>
+                <a href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank" style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+                        alt="Facebook" width="30" height="30" style="vertical-align: middle;">
+                </a>
+                <a href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank" style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg" alt="Twitter"
+                        width="30" height="30" style="vertical-align: middle;">
+                </a>
+                <a href="https://www.youtube.com/watch?v=NsQQnqn65Kg&list=PL0FBsi3fjGvDNgNQzXouUNfbpW326A3uj&ab_channel=RicardoL%C3%B3pezArriagaBueno"
+                    target="_blank" style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"
+                        width="30" height="30" style="vertical-align: middle;">
+                </a>
+                <a href="https://www.linkedin.com/in/ricardo-l%C3%B3pez-arriaga-bueno-210393159/" target="_blank"
+                    style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Linkedin_icon.svg" alt="LinkedIn"
+                        width="30" height="30" style="vertical-align: middle;">
+                </a>
+                <a href="https://github.com/rickylobu" target="_blank" style="margin: 0 10px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub"
+                        width="30" height="30" style="vertical-align: middle;">
+                </a>
+            </section>
+
+            <!-- Enlaces secundarios -->
+            <nav>
+                <a href="#" style="margin-left: 10px;">Política de Privacidad</a>
+                <a href="#" style="margin-left: 10px;">Términos de Servicio</a>
+                <a href="#" style="margin-left: 10px;">Contacto</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="responsive.js"></script>
+</body>
+
+</html>

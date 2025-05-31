@@ -888,3 +888,32 @@ button {
         align-items: center;
     }
 }
+
+
+/* estilos de Inicio */
+#header-inicio,
+#footer-inicio {
+    background: repeating-linear-gradient(135deg, #F16529,
+            #2965F1,
+            #EACA32);
+    border-radius: 5px;
+}
+
+
+.non-inicio {
+    border: none;
+    height: 10px;
+    background: repeating-linear-gradient(135deg, #F16529,
+            #007BFF,
+            #EACA32);
+    border-radius: 5px;
+}
+
+.par-inicio {
+    border: none;
+    height: 10px;
+     background: repeating-linear-gradient(45deg, #F16529,
+            #007BFF,
+            #EACA32);
+    border-radius: 5px;
+}
